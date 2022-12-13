@@ -37,11 +37,6 @@ function Create(){
                     <Button variant="contained" onClick={postdetails}>Submit Form</Button>
                 </Box>
 
-                
-
-                 
-                
-
                 {/* <input type="text" onChange={(eve)=> setName(eve.target.value)} placeholder="Please Enter Your Name"/><br />
                 <input type="text" onChange={(eve)=> setEmail(eve.target.value)} placeholder="Please Enter Your Email"/><br /> */}
             
