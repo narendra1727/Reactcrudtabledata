@@ -33,13 +33,15 @@ function Newdata({update1,newid12}){
   let [email1,setEmail1]=useState(represent[0].Email);
  let navigate4=useNavigate();
  
-  function putdetails(event){
+  async function putdetails(event){
     event.preventDefault();
-    axios.put(`https://6321d2e9fd698dfa29000d7d.mockapi.io/users/${newid12}`,{
+    let putde=await axios.put(`https://6321d2e9fd698dfa29000d7d.mockapi.io/users/${newid12}`,{
       name:text1,
       Email:email1
 
     });
+
+    console.log(putde);
 
     navigate4(-1);
   }
