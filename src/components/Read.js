@@ -52,11 +52,12 @@ const Read = ({ data }) => {
         setData1(newdata.data);
     };
 
-    getdata();
+    
 
     useEffect(()=>{
         // axios.get("https://6321d2e9fd698dfa29000d7d.mockapi.io/users").then((res)=> setData1(res.data)).catch((err)=> console.log(err))
-        getdata()
+        getdata();
+        console.log("Hi")
     },[]);
 
 

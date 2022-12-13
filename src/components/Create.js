@@ -13,10 +13,15 @@ function Create(){
     const [email,setEmail]=useState("");
     const navigate=useNavigate();
 
-    function postdetails(e){
+    async function postdetails(e){
         e.preventDefault();
-        axios.post("https://6321d2e9fd698dfa29000d7d.mockapi.io/users",{name:name,Email:email}).then((res)=>console.log(res));
-        navigate(-1);
+        try{
+            let postdata=await axios.post("https://6321d2e9fd698dfa29000d7d.mockapi.io/users",{name:name,Email:email});
+            console.log(postdata);
+            navigate(-1);
+        }catch(err){
+            console.log(err);
+        }
 
     }
     return (
